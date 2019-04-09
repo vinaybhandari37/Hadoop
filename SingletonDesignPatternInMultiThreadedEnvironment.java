@@ -1,5 +1,3 @@
-package in.bench.resources.singleton.design.pattern;
-  
 public class SingletonDesignPatternInMultiThreadedEnvironment {
   
     // Step 1: private static variable of INSTANCE variable
