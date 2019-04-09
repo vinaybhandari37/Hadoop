@@ -1,26 +1,26 @@
-public class SingletonDesignPatternInMultiThreadedEnvironment {
+public class SingletonMultipleThreads {
   
-    // Step 1: private static variable of INSTANCE variable
+    // Private static variable of INSTANCE variable
     private static volatile
-        SingletonDesignPatternInMultiThreadedEnvironment INSTANCE;
+        SingletonMultipleThreads INSTANCE;
   
-    // Step 2: private constructor
-    private SingletonDesignPatternInMultiThreadedEnvironment() {
+    // Private constructor
+    private SingletonMultipleThreads() {
   
     }
   
-    // Step 3: Provide public static getInstance() method 
+    // Provide public static getInstance() method 
     // returning INSTANCE after checking
-    public static SingletonDesignPatternInMultiThreadedEnvironment 
+    public static SingletonMultipleThreads 
         getInstance() {
   
         // synchronized block
         synchronized
-          (SingletonDesignPatternInMultiThreadedEnvironment.class){
+          (SingletonMultipleThreads.class){
           if(null == INSTANCE){
               INSTANCE = 
                 new
-                SingletonDesignPatternInMultiThreadedEnvironment();
+                SingletonMultipleThreads();
           }
           return INSTANCE;
         }
